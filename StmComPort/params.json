@@ -1,0 +1,83 @@
+﻿{
+  "buttons":[
+    {
+    "section":"Команды",
+    "name":"Частота sin",
+    "description":"Задать частоту управляющего синуса, рад/с",
+    "argument":"float",
+    "str2send":"f%1",
+    "str2get":"freq changed",
+    "id":1
+  },
+  {
+    "section":"Команды",
+    "name":"Усредняющий фильтр",
+    "description":"Использование усредняющего фильтра для входного сигнала",
+    "argument":"bool",
+    "str2send":"e%1",
+    "str2get":"ap filter enable=%1"
+  },
+  {
+    "section":"Команды",
+    "name":"Дискр. фильтр",
+    "description":"Использование дискретного фильтра для входного сигнала",
+    "argument":"bool",
+    "str2send":"dfe%1",
+    "str2get":""
+  },
+  {
+    "section":"Команды",
+    "name":"Телеметрия",
+    "description":"Тип снимаемой телеметрии",
+    "argument":{
+      "poles":["Нет", "Сигнал", "Фаза", "Сигнал и фаза"],
+      "values":["0", "1", "d", "b"]
+    }
+    ,
+    "str2send":"t%1",
+    "str2get":"enable="
+  },
+  {
+    "section":"Команды",
+    "name":"Частота ШИМ",
+    "description":"Коэффициент делителя частоты ШИМ, uint<0xFFFF",
+    "argument":"int",
+    "str2send":"p%1",
+    "str2get":"PWM presc set"
+  },
+  {
+    "section":"Команды",
+    "name":"Установить 0",
+    "description":"Установить значение АЦП, соотв. 0 выходу. Аргумент - время, мс",
+    "argument":"int",
+    "str2send":"z%1"
+  },
+  {
+    "section":"Команды",
+    "name":"Сигнал",
+    "description":"Тип выходного сигнала",
+    "argument":{
+      "poles":["Один, модуль", "Два, по знаку"],
+      "values":["0", "1"]
+    }
+    ,
+    "str2send":"m%1",
+    "str2get":"Ouput mode changed"
+  },
+  {
+  "section":"Команды",
+  "name":"Мин выход",
+  "description":"Минимальная величина выходного сигнала, %",
+  "argument":"float",
+  "str2send":"a%1",
+  "str2get":"min pulse changed",
+  "id":1
+  },
+  {
+    "section":"Команды",
+    "name":"Помощь",
+    "description":"Получить список доступных элементарных команд",
+    "str2send":"h"
+  }
+]
+}
